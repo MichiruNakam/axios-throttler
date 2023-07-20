@@ -8,7 +8,7 @@ import { axiosThrottler } from ".";
 
 export const timer = (ms: number) => new Promise(f => setTimeout(f, ms));
 
-describe("axiosRateLimit Tests", () => {
+describe("axiosThrottler Tests", () => {
         
     it("Should execute inmediately the first call, and delay the second one", async () => {
         

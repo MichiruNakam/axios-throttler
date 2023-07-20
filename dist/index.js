@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.axiosRateLimit = void 0;
+exports.axiosThrottler = void 0;
 /**
  * Applies rate limit to the given `ax` Axios Instance to `rps` requests per second.
  * @param a The AxiosInstance to apply rate limit.
  * @param rps The maximum allowed number of requests per second.
  */
-function axiosRateLimit(ax, rps) {
+function axiosThrottler(ax, rps) {
     const requestInterval = 1000 / rps;
     let lastRequestTime = Date.now();
     let queuedRequests = 0;
@@ -31,4 +31,4 @@ function axiosRateLimit(ax, rps) {
         return request;
     });
 }
-exports.axiosRateLimit = axiosRateLimit;
+exports.axiosThrottler = axiosThrottler;
