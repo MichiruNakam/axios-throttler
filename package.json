@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "axios-mock-adapter": "^1.21.5",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "rimraf": "^5.0.1",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1"
+  },
+  "name": "axios-throttler",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "mocha",
+    "test:coverage": "nyc mocha",
+    "build": "npm run clean && npm run test && tsc",
+    "clean": "rimraf ./dist"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "axios",
+    "throttle",
+    "rate limit"
+  ],
+  "author": "Michiru Michel Nakamura",
+  "license": "MIT",
+  "description": "A simple and lightweight request rate-limiter for axios."
+}

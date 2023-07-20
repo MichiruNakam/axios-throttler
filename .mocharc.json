@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json.schemastore.org/mocharc",
+    "exit": true,
+    "extension": [".ts"],
+    "reporter": "spec",
+    "reporterEnabled": "spec, mocha-junit-reporter",
+    "timeout": 4000,
+    "recursive": true,
+    "spec": [ "src/**/*.test.ts" ],
+    "require": [ "ts-node/register" ]
+}
