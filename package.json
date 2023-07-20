@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "axios": "^1.4.0",
-    "typescript": "^5.1.6"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
+    "typescript": "^5.1.6",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "axios-mock-adapter": "^1.21.5",
@@ -15,7 +15,7 @@
     "ts-node": "^10.9.1"
   },
   "name": "axios-throttler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "test": "mocha",
     "test:coverage": "nyc mocha",
