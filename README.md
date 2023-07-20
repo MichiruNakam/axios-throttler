@@ -13,13 +13,20 @@ A simple and lightweight request rate-limiter for axios. The requests are delaye
 
 ### Typescript
 
+To throttle axios to call a maximum of 5 requests per second:
+
 ```typescript
-import {axiosThrottler} from "axios-throttler";
+import { AxiosThrottler } from "axios-throttler";
 
 const client = axios.create({baseURL: 'https://sampleurl.com'});
-const rps = 1;
 
-axiosThrottler(client, rps);
+AxiosThrottler.throttle(client, AxiosThrottler.rps(5));
+```
+
+Alternatively, you can pass `rpm` (requests per minute):
+
+```typescript
+AxiosThrottler.throttle(client, AxiosThrottler.rpm(100));
 ```
 
 ## Notes
