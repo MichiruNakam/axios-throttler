@@ -31,4 +31,3 @@ axiosThrottler(client, rps);
 * Add Javascript example
 * Improve existing test
 * Add tests for global axios instance
-* Improve input parameters (maybe adding requests-per-minute?)
