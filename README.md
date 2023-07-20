@@ -1,6 +1,6 @@
 # Axios Throttler
 
-A simple and lightweight request rate-limiter for axios. The requests are delayed in a way that simultaneous requests cannot be executed before the computed period according to a given rps (requests per second). So two requests with rps = 2, the first will be called at second 0, and the second one at second 0,5.
+A simple and lightweight request rate-limiter for axios. The requests are delayed in a way that simultaneous requests cannot be executed within the timeframe computed according to a given rps (requests per second). So for two request calls with rps = 2, the first will be called at second 0, and the last one at second 0,5.
 
 ## Why Axios Throttler?
 
@@ -10,6 +10,8 @@ A simple and lightweight request rate-limiter for axios. The requests are delaye
 + No dependencies besides axios
 
 ## Usage
+
+### Typescript
 
 ```typescript
 import {axiosThrottler} from "axios-throttler";
@@ -26,6 +28,7 @@ axiosThrottler(client, rps);
 
 ## TODO
 
+* Add Javascript example
 * Improve existing test
 * Add tests for global axios instance
 * Improve input parameters (maybe adding requests-per-minute?)
